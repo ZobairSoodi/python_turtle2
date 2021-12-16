@@ -5,21 +5,42 @@ turtle.hideturtle()
 t = turtle.Turtle(shape="turtle")
 t.color("black")
 t.speed(11)
-t.pensize(1)
+t.pensize(2)
 list_color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 
+def flag():
+    t.color("green")
+    t.pensize(5)
+    for i in range(5):
+        t.forward(150)
+        t.right(144)
+    t.penup()
+    t.forward(250)
+    t.left(90)
+    t.forward(80)
+    t.left(90)
+    t.color("red")
+    t.pendown()
+    for i in range(2):
+        t.forward(350)
+        t.left(90)
+        t.forward(200)
+        t.left(90)
+
+
+# flag()
+
+
 def rectangle(fd, ran):
-    for j in range(ran):
-        for i in range(4):
-            if i == 3:
-                fd += 4
-            t.forward(fd)
-            t.right(90)
-        t.left(5)
+    for i in range(ran):
+        t.color(list_color[i % 7])
+        fd += 1
+        t.forward(fd)
+        t.left(50)
 
 
-# rectangle(80, 60)
+# rectangle(5, 200)
 
 
 def circle():
@@ -31,7 +52,7 @@ def circle():
         t.rt(10)
 
 
-#circle()
+# circle()
 
 
 def flower(color, shape, has_circle):
@@ -58,7 +79,7 @@ def flower(color, shape, has_circle):
     """
 
 
-#flower("orange", 70, False)
+# flower("orange", 70, True)
 
 
 def bruh():
